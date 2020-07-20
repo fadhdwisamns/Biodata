@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     EditText txtUsername,txtPassword;
     Button btnLogin;
@@ -21,6 +21,9 @@ public class MainActivity extends AppCompatActivity {
         txtPassword = findViewById(R.id.txtPassword);
         btnLogin = findViewById(R.id.btnLogin);
 
+
+
+
         txtUsername.setText("dewabrata");
         txtPassword.setText("12345");
 
@@ -32,4 +35,6 @@ public class MainActivity extends AppCompatActivity {
         String pesan = "Isinya adalah "+ txtUsername.getText().toString() +"  passwordnya adalah "+txtPassword.getText().toString();
         Toast.makeText(MainActivity.this,pesan,Toast.LENGTH_LONG).show();
     }
+
+
 }
