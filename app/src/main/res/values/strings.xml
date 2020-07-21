@@ -3,4 +3,9 @@
     <string name="username">Username :</string>
     <string name="password">Password :</string>
     <string name="login">Masuk</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="add_data">Tambah Data</string>
+    <string name="list_data">Lihat Data</string>
+    <string name="about_us">Tentang Kami</string>
+    <string name="exit">Keluar</string>
 </resources>

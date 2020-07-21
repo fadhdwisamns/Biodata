@@ -2,6 +2,7 @@ package com.juaracoding.hellocodingjuara;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +35,13 @@ public class MainActivity extends AppCompatActivity{
     public void login(View view){
         String pesan = "Isinya adalah "+ txtUsername.getText().toString() +"  passwordnya adalah "+txtPassword.getText().toString();
         Toast.makeText(MainActivity.this,pesan,Toast.LENGTH_LONG).show();
+
+        Intent nextScreen  = new Intent(MainActivity.this, MainMenu.class);
+        nextScreen.putExtra("username",txtUsername.getText().toString());
+        nextScreen.putExtra("password",txtPassword.getText().toString());
+
+        startActivity(nextScreen);
+
     }
 
 
