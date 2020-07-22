@@ -139,6 +139,7 @@
                 android:id="@+id/btnSimpan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="simpan"
                 android:text="@string/simpan" />
 
             <Button
