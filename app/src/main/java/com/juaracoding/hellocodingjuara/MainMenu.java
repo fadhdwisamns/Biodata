@@ -1,5 +1,6 @@
 package com.juaracoding.hellocodingjuara;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -30,5 +31,8 @@ public class MainMenu extends AppCompatActivity {
     public void screenTambahData(View view){
         Intent intent = new Intent(MainMenu.this,TambahData.class);
         startActivity(intent);
+
     }
+
+
 }

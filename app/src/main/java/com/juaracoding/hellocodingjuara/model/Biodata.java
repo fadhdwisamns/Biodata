@@ -1,6 +1,8 @@
 package com.juaracoding.hellocodingjuara.model;
 
-public class Biodata {
+import java.io.Serializable;
+
+public class Biodata  {
     private String nama;
     private String jenis_kelamin;
     private String pekerjaan;

@@ -17,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.juaracoding.hellocodingjuara.model.Biodata;
 
 import java.text.SimpleDateFormat;
@@ -48,6 +49,14 @@ Button btnSimpan, btnBatal;
 
         btnBatal = findViewById(R.id.btnBatal);
         btnSimpan = findViewById(R.id.btnSimpan);
+
+        btnBatal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
 
         calendarLahir.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -103,6 +112,10 @@ Button btnSimpan, btnBatal;
             biodata.setTelepon(txtTelepon.getText().toString());
             biodata.setCatatan(txtCatatan.getText().toString());
 
+            Gson gson = new Gson();
+            String json = gson.toJson(biodata);
+            showJsonDialog(json);
+
         }else{
             showErrorDialog();
         }
@@ -120,6 +133,21 @@ Button btnSimpan, btnBatal;
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(TambahData.this,"Cancel ditekan",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        AlertDialog alert = alertDialog.create();
+        alert.show();
+    }
+
+
+    public void showJsonDialog(String json){
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(TambahData.this);
+        alertDialog.setTitle("Json");
+        alertDialog.setMessage("Jsonnya adalah : " +json).setIcon(R.drawable.ic_about).setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
             }
         });
 
