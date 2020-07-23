@@ -19,9 +19,14 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.juaracoding.hellocodingjuara.model.Biodata;
+import com.juaracoding.hellocodingjuara.utility.SharedPrefUtil;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class TambahData extends AppCompatActivity {
@@ -69,6 +74,62 @@ Button btnSimpan, btnBatal;
             }
         });
 
+
+        String dataJson = SharedPrefUtil.getInstance(TambahData.this).getString("data_input");
+
+        if(!TextUtils.isEmpty(dataJson)){
+
+            mappingData(dataJson);
+        }else{
+
+        }
+
+    }
+
+    public void mappingData(String json){
+        Biodata biodata = new Gson().fromJson(json,Biodata.class);
+
+
+        txtNama.setText(biodata.getNama());
+
+        if(biodata.getJenis_kelamin().equalsIgnoreCase("Pria")){
+            rbPria.setChecked(true);
+            rbWanita.setChecked(false);
+        }else if (biodata.getJenis_kelamin().equalsIgnoreCase("Wanita")){
+            rbWanita.setChecked(true);
+            rbPria.setChecked(false);
+        }else{
+            rbPria.setChecked(false);
+            rbWanita.setChecked(false);
+        }
+
+        List<String> lstPekerjaan = Arrays.asList(getResources().getStringArray(R.array.pekerjaan));
+
+         for(int x = 0 ;  x < lstPekerjaan.size();x++){
+
+             if(lstPekerjaan.get(x).equalsIgnoreCase(biodata.getPekerjaan())){
+                 spnPekerjaan.setSelection(x);
+             }
+
+         }
+
+         txtAlamat.setText(biodata.getAlamat());
+         txtTelepon.setText(biodata.getTelepon());
+         txtEmail.setText(biodata.getEmail());
+         txtCatatan.setText(biodata.getCatatan());
+         
+        Date dateDummy = null;
+        try {
+            dateDummy =new SimpleDateFormat("dd-MMMM-yyyy").parse(biodata.getTanggal_lahir());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        calendarLahir.setDate(dateDummy.getTime());
+
+
+
+
+
     }
 
     public boolean checkMandatory(){
@@ -115,6 +176,9 @@ Button btnSimpan, btnBatal;
             Gson gson = new Gson();
             String json = gson.toJson(biodata);
             showJsonDialog(json);
+
+            SharedPrefUtil.getInstance(TambahData.this).put("data_input", json);
+
 
         }else{
             showErrorDialog();
