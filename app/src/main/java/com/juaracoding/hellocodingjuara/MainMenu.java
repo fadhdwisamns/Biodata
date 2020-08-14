@@ -34,5 +34,11 @@ public class MainMenu extends AppCompatActivity {
 
     }
 
+    public void screenListData(View view){
+        Intent intent = new Intent(MainMenu.this,ListBiodata.class);
+        startActivity(intent);
+
+    }
+
 
 }
