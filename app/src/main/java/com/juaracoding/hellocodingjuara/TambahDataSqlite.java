@@ -162,10 +162,15 @@ Button btnSimpan, btnBatal;
 
 
 
+
+
         if(TextUtils.isEmpty(txtEmail.getText().toString() )|| !Patterns.EMAIL_ADDRESS.matcher(txtEmail.getText().toString()).matches()){
             pass = false;
             txtEmail.setError("Masukan email dengan format yang benar");
         }
+
+
+
 
         return pass;
     }
@@ -174,11 +179,28 @@ Button btnSimpan, btnBatal;
         if(checkMandatory()){
 
 
+
             new Thread(new Runnable() {
                 @Override
                 public void run() {
 
-                    mDb.biodataDao().insertAll(generateObjectData());
+                    Biodata biodata=null;
+
+                    biodata =  mDb.biodataDao().findByTelepon(txtTelepon.getText().toString());
+
+                    if(biodata != null){
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                showErrorDialog2();
+                            }
+                        });
+                    }else{
+                        mDb.biodataDao().insertAll(generateObjectData());
+                    }
+
+
 
                 }
             }).start();
@@ -228,6 +250,25 @@ Button btnSimpan, btnBatal;
         final AlertDialog.Builder alertDialog = new AlertDialog.Builder(TambahDataSqlite.this);
         alertDialog.setTitle("Peringatan");
         alertDialog.setMessage("Mohon isi field yang mandatory").setIcon(R.drawable.ic_close).setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        }).setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(TambahDataSqlite.this,"Cancel ditekan",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        AlertDialog alert = alertDialog.create();
+        alert.show();
+    }
+
+    public void showErrorDialog2(){
+        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(TambahDataSqlite.this);
+        alertDialog.setTitle("Peringatan");
+        alertDialog.setMessage("Mohon masukan telepon yang berbeda").setIcon(R.drawable.ic_close).setCancelable(false).setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
