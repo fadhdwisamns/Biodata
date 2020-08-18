@@ -29,7 +29,7 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void screenTambahData(View view){
-        Intent intent = new Intent(MainMenu.this,TambahData.class);
+        Intent intent = new Intent(MainMenu.this,TambahDataSqlite.class);
         startActivity(intent);
 
     }

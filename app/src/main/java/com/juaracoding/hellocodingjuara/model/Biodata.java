@@ -1,15 +1,31 @@
 package com.juaracoding.hellocodingjuara.model;
 
-import java.io.Serializable;
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+
+
+@Entity(tableName = "Biodata")
 public class Biodata  {
+
+    @ColumnInfo(name = "nama")
     private String nama;
+    @ColumnInfo(name = "jenis_kelamin")
     private String jenis_kelamin;
+    @ColumnInfo(name = "pekerjaan")
     private String pekerjaan;
+    @ColumnInfo(name = "tanggal_lahir")
     private String tanggal_lahir;
+    @ColumnInfo(name = "alamat")
     private String alamat;
+    @PrimaryKey
+    @NonNull
     private String telepon;
+    @ColumnInfo(name = "email")
     private String email;
+    @ColumnInfo(name = "catatan")
     private String catatan;
 
 

@@ -1,6 +1,7 @@
 package com.juaracoding.hellocodingjuara;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +10,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.juaracoding.hellocodingjuara.model.Biodata;
+
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity{
 
     EditText txtUsername,txtPassword;
     Button btnLogin;
-
+    private AppDatabase mDb;
+    Biodata data1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +31,12 @@ public class MainActivity extends AppCompatActivity{
 
 
 
+
+
         txtUsername.setText("dewabrata");
         txtPassword.setText("12345");
+
+
 
 
 

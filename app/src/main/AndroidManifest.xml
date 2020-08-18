@@ -13,6 +13,7 @@
         <activity android:name=".Testing"></activity>
         <activity android:name=".TambahData" />
         <activity android:name=".MainMenu" />
+        <activity android:name=".TambahDataSqlite"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
