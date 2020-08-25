@@ -9,8 +9,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainMenu extends AppCompatActivity {
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
+public class MainMenu extends AppCompatActivity {
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
     String username, password;
     TextView txtUsername;
     ImageView btnTambahData;
@@ -20,12 +24,14 @@ public class MainMenu extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
         txtUsername = findViewById(R.id.txtUsername);
         btnTambahData = findViewById(R.id.btnTambahData);
-        username = getIntent().getStringExtra("username");
-        password = getIntent().getStringExtra("password");
+//        username = getIntent().getStringExtra("username");
+//        password = getIntent().getStringExtra("password");
+        firebaseAuth = firebaseAuth.getInstance();
+        firebaseUser = firebaseAuth.getCurrentUser();
+
+        txtUsername.setText(firebaseUser.getEmail());
 
 
-
-        txtUsername.setText(username);
     }
 
     public void screenTambahData(View view){
@@ -39,6 +45,10 @@ public class MainMenu extends AppCompatActivity {
         startActivity(intent);
 
     }
-
+    public void screenLogout(View view){
+    FirebaseAuth.getInstance().signOut();
+    Intent intent = new Intent(MainMenu.this,MainActivity.class);
+    startActivity(intent);
+    }
 
 }

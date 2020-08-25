@@ -55,13 +55,6 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-        txtUsername.setText("dewabrata");
-        txtPassword.setText("12345");
-
-
-
-
-
     }
 
     public void login(View view){
@@ -74,20 +67,9 @@ public class MainActivity extends AppCompatActivity{
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                // Sign in success, update UI with the signed-in user's information
-
-                                FirebaseUser user = mAuth.getCurrentUser();
-                                String pesan = "Isinya adalah " + txtUsername.getText().toString() + "  passwordnya adalah " + txtPassword.getText().toString();
-                                Toast.makeText(MainActivity.this, pesan, Toast.LENGTH_LONG).show();
-
-                                Intent nextScreen = new Intent(MainActivity.this, MainMenu.class);
-                                nextScreen.putExtra("username", txtUsername.getText().toString());
-                                nextScreen.putExtra("password", txtPassword.getText().toString());
-
-                                startActivity(nextScreen);
+                                Intent intent = new Intent(MainActivity.this,MainMenu.class);
+                                startActivity(intent);
                             } else {
-                                // If sign in fails, display a message to the user.
-
                                 Toast.makeText(MainActivity.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();
 
