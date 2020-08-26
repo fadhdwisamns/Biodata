@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "560740091283",
+    "firebase_url": "https://bootcamp-6fc9a.firebaseio.com",
+    "project_id": "bootcamp-6fc9a",
+    "storage_bucket": "bootcamp-6fc9a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560740091283:android:91f4780f16732804211466",
+        "android_client_info": {
+          "package_name": "com.juaracoding.hellocodingjuara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560740091283-01rusg7t7k448mti13ch3tacdc6niti5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.juaracoding.hellocodingjuara",
+            "certificate_hash": "444ef48eb9803678c35c1e3791bc9a622ffb209e"
+          }
+        },
+        {
+          "client_id": "560740091283-qo9vn43bfp3rbebrjhqobu0fgo1nfp6b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0b-xagavWchI58Cll4UIlrL9kw1rdzSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560740091283-qo9vn43bfp3rbebrjhqobu0fgo1nfp6b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
