@@ -18,6 +18,8 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.juaracoding.hellocodingjuara.model.Biodata;
@@ -40,6 +42,7 @@ CalendarView calendarLahir;
 EditText txtAlamat,txtTelepon, txtEmail,txtCatatan;
 Button btnSimpan, btnBatal;
     String tanggal="";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +89,8 @@ Button btnSimpan, btnBatal;
         }else{
 
         }
+
+
 
     }
 

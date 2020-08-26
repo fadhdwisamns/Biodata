@@ -17,6 +17,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.juaracoding.hellocodingjuara.model.Biodata;
@@ -36,6 +38,7 @@ RadioButton rbPria,rbWanita;
 Spinner spnPekerjaan;
 CalendarView calendarLahir;
 EditText txtAlamat,txtTelepon, txtEmail,txtCatatan;
+    private DatabaseReference mDatabase;
 Button btnSimpan, btnBatal;
     String tanggal="";
     private AppDatabase mDb;
@@ -86,7 +89,7 @@ Button btnSimpan, btnBatal;
         }else{
 
         }
-
+        mDatabase = FirebaseDatabase.getInstance().getReference();
     }
 
     public void mappingData(String json){
@@ -197,7 +200,11 @@ Button btnSimpan, btnBatal;
                             }
                         });
                     }else{
+
+
+
                         mDb.biodataDao().insertAll(generateObjectData());
+                       mDatabase.child("biodata").child(generateObjectData().getTelepon()).setValue(generateObjectData());
                     }
 
 
