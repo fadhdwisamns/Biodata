@@ -41,7 +41,7 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void screenListData(View view){
-        Intent intent = new Intent(MainMenu.this,ListBiodata.class);
+        Intent intent = new Intent(MainMenu.this,ListBiodataFirebase.class);
         startActivity(intent);
 
     }
