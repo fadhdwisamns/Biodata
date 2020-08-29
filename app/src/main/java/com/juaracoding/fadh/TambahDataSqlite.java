@@ -1,7 +1,6 @@
-package com.juaracoding.hellocodingjuara;
+package com.juaracoding.fadh;
 
 import android.content.DialogInterface;
-import android.icu.text.Replaceable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,13 +21,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.juaracoding.hellocodingjuara.model.Biodata;
-import com.juaracoding.hellocodingjuara.utility.SharedPrefUtil;
+import com.juaracoding.fadh.R;
+import com.juaracoding.fadh.model.Biodata;
+import com.juaracoding.fadh.utility.SharedPrefUtil;
 
 import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;

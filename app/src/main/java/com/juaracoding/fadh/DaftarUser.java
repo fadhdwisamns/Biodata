@@ -1,4 +1,4 @@
-package com.juaracoding.hellocodingjuara;
+package com.juaracoding.fadh;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +14,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.juaracoding.fadh.R;
 
 public class DaftarUser extends AppCompatActivity {
     private FirebaseAuth mAuth;

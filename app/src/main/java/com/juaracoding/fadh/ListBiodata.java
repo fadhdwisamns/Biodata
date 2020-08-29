@@ -1,4 +1,4 @@
-package com.juaracoding.hellocodingjuara;
+package com.juaracoding.fadh;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -14,14 +14,15 @@ import android.widget.ImageView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.juaracoding.hellocodingjuara.adapter.AdapterListBasic;
-import com.juaracoding.hellocodingjuara.model.Biodata;
-import com.juaracoding.hellocodingjuara.utility.SharedPrefUtil;
+import com.juaracoding.fadh.adapter.AdapterListBasic;
+import com.juaracoding.fadh.model.Biodata;
+import com.juaracoding.fadh.R;
+import com.juaracoding.fadh.utility.SharedPrefUtil;
 
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class ListBiodata extends AppCompatActivity implements AdapterListBasic.OnItemClickListener{
+public class ListBiodata extends AppCompatActivity implements AdapterListBasic.OnItemClickListener {
 
     RecyclerView lstBiodata;
     private AppDatabase mDb;

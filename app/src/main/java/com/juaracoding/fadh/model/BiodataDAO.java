@@ -1,4 +1,4 @@
-package com.juaracoding.hellocodingjuara.model;
+package com.juaracoding.fadh.model;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

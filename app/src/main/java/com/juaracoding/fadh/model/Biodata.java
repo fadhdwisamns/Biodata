@@ -1,4 +1,4 @@
-package com.juaracoding.hellocodingjuara.model;
+package com.juaracoding.fadh.model;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

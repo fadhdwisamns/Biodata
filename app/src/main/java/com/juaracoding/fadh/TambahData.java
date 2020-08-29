@@ -1,4 +1,4 @@
-package com.juaracoding.hellocodingjuara;
+package com.juaracoding.fadh;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.PatternMatcher;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
@@ -18,12 +17,11 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import com.juaracoding.hellocodingjuara.model.Biodata;
-import com.juaracoding.hellocodingjuara.utility.SharedPrefUtil;
+import com.juaracoding.fadh.R;
+import com.juaracoding.fadh.model.Biodata;
+import com.juaracoding.fadh.utility.SharedPrefUtil;
 
 import java.lang.reflect.Type;
 import java.text.ParseException;
@@ -32,7 +30,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.regex.Pattern;
 
 public class TambahData extends AppCompatActivity {
 EditText txtNama;

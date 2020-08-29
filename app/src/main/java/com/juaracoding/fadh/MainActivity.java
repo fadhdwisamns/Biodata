@@ -1,12 +1,10 @@
-package com.juaracoding.hellocodingjuara;
+package com.juaracoding.fadh;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,9 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.juaracoding.hellocodingjuara.model.Biodata;
-
-import java.util.List;
+import com.juaracoding.fadh.R;
+import com.juaracoding.fadh.model.Biodata;
 
 public class MainActivity extends AppCompatActivity{
 

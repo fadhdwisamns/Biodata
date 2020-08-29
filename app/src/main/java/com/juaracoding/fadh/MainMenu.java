@@ -1,6 +1,5 @@
-package com.juaracoding.hellocodingjuara;
+package com.juaracoding.fadh;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +10,7 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.juaracoding.fadh.R;
 
 public class MainMenu extends AppCompatActivity {
     FirebaseAuth firebaseAuth;

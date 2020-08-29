@@ -1,18 +1,17 @@
-package com.juaracoding.hellocodingjuara.adapter;
+package com.juaracoding.fadh.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.juaracoding.hellocodingjuara.R;
-import com.juaracoding.hellocodingjuara.model.Biodata;
+import com.juaracoding.fadh.R;
+import com.juaracoding.fadh.model.Biodata;
 
 
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.juaracoding.hellocodingjuara;
+package com.juaracoding.fadh;
 
 import org.junit.Test;
 

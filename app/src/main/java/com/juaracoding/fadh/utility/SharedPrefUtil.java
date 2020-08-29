@@ -1,4 +1,4 @@
-package com.juaracoding.hellocodingjuara.utility;
+package com.juaracoding.fadh.utility;
 
 import android.content.Context;
 import android.content.SharedPreferences;

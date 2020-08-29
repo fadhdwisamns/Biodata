@@ -6,7 +6,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.juaracoding.hellocodingjuara"
+        applicationId "com.juaracoding.Biodata"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -21,6 +21,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+//    buildscript {
+//        repositories {
+//            // Check that you have the following line (if not, add it):
+//            google()  // Google's Maven repository
+//        }
+//        dependencies {
+//            // Add this line
+//            classpath 'com.google.gms:google-services:4.3.3'
+//        }
+//    }
 }
 
 dependencies {

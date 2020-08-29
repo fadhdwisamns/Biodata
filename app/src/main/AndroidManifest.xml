@@ -15,19 +15,14 @@
 
         </activity>
         <activity android:name=".TambahData" />
-        <activity android:name=".MainMenu" >
+        <activity android:name=".MainMenu" />
+        <activity android:name=".TambahDataSqlite" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".TambahDataSqlite" />
-        <activity android:name=".ListBiodataFirebase">
-
-        </activity>
-        <activity android:name=".MainActivity">
-
         </activity>
     </application>
 

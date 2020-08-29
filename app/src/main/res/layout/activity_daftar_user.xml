@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.juaracoding.fadh.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
         android:id="@+id/textView"
@@ -19,12 +17,12 @@
         app:layout_constraintVertical_bias="0.37" />
 
     <EditText
-        android:id="@+id/txtUsername"
+        android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -33,8 +31,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/password"
-        app:layout_constraintStart_toStartOf="@+id/txtUsername"
-        app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
+        app:layout_constraintStart_toStartOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
     <EditText
         android:id="@+id/txtPassword"
@@ -46,22 +44,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/Daftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:onClick="login"
-        android:text="@string/login"
+        android:text="@string/daftar"
         app:layout_constraintEnd_toEndOf="@+id/txtPassword"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
 
-    <Button
-        android:id="@+id/btnDaftar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Daftar"
-        app:layout_constraintBottom_toBottomOf="@+id/btnLogin"
-        app:layout_constraintEnd_toStartOf="@+id/btnLogin"
-        app:layout_constraintStart_toStartOf="@+id/txtPassword"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
